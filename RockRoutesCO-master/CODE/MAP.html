@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Rock Routes in Colorado</title>
+<style>
+  html, body, #viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+</style>
+
+<link rel="stylesheet" href="https://js.arcgis.com/4.7/esri/css/main.css">
+
+<script src="https://js.arcgis.com/4.7/"></script>
+
+<script>
+require([
+  "esri/Map",
+  "esri/views/MapView",
+  "esri/layers/FeatureLayer",
+  "esri/widgets/LayerList",
+  "dojo/domReady!"
+], function(Map, MapView, FeatureLayer, LayerList){
+  var map = new Map({
+    basemap: "hybrid"
+  });
+  var view = new MapView({
+    container: "viewDiv",  // Reference to the scene div created in step 5
+    map: map,  // Reference to the map object created before the scene
+    zoom: 8,  // Sets zoom level based on level of detail (LOD)
+    center: [-105.62, 39.63]  // Sets center point of view using longitude,latitude
+  });
+  
+  // Boulder Grade V2
+  var featureLayer9 = new FeatureLayer({
+	url: "https://services1.arcgis.com/qr14biwnHA6Vis6l/arcgis/rest/services/Boulder_Grade_V2/FeatureServer/0?token=Hd-VnRvTIxynGQgkIwl3DHqrE11rcm0PJMlfWxNa1Rk6pd9SmLLXlUUzdNOfMpzDZFalrgIIEwwAWBkBajNsXrGnATn3KtjkIigldivDkoqTfCmrcrcZlqaP6miguQFTkxCqPBB93_yGAQCKCE94k0Wo6JIlNm-wOmLPqEwqh2r5LRANCOwvUKCQwqnGrFhpubn284QzWu1DjgkeZGCEfR1cEL6-Ve21NVjP05IU4ygIqi9kQLGqFjQh9-M228PO",
+	
+	//start of pop up part
+	  popupTemplate: {
+          title: "{Route_name}",
+          actions: [{
+            id: "find"
+          }],
+          content: [{
+            type: "fields",
+            fieldInfos: [{
+              fieldName: "Route_name",
+			        label: "Route Name"
+            }, {
+              fieldName: "Difficulty",
+              label: "Grade"
+            }, {
+			  fieldName: "Rating"
+			}, {
+			  fieldName: "Type_of_cl",
+			  label: "Type of climbing"
+			}, {
+			  fieldName: "Type"
+			}, {
+			  fieldName: "Link_to_ro",
+			  label: "Link to route"
+			}, {
+			  fieldName: "Link_climb",
+			  label: "Link to climb site"
+			},
+			]
+          }]
+        }
+	//end of pop up part
+	
+	});
+	
+	map.add(featureLayer9);
+	
+  // Boulder Grade V1
+  var featureLayer8 = new FeatureLayer({
+	url: "https://services1.arcgis.com/qr14biwnHA6Vis6l/arcgis/rest/services/Boulder_Grade_V1/FeatureServer/0?token=EobxYDJpOmD6uYbbJ3CrfS-64yIyrkRtyuYrfCQ7hUEK8zbagY_iSdHImhZ3kUS4FKoS09wyDodHPUnIpyw3VfMaCCBVU3Kz71HhsX7nA55OZq8lys6O7lGYTq6IYTF1bLCpocg2mS-KNbcNFCNfJHaJ3SKyymDBMizo2bR5VboHsRmTZqij-sigs9I4PgJxdRclBEtpu9RzDU7RNNd2JLIyAjseuCA8Ry3sl_ppwQnvWOC8wljxJsuwV9eTlkF5",
+	
+	//start of pop up part
+	  popupTemplate: {
+          title: "{Route_name}",
+          actions: [{
+            id: "find"
+          }],
+          content: [{
+            type: "fields",
+            fieldInfos: [{
+              fieldName: "Route_name",
+			        label: "Route Name"
+            }, {
+              fieldName: "Difficulty",
+              label: "Grade"
+            }, {
+			  fieldName: "Rating"
+			}, {
+			  fieldName: "Type_of_cl",
+			  label: "Type of climbing"
+			}, {
+			  fieldName: "Type"
+			}, {
+			  fieldName: "Link_to_ro",
+			  label: "Link to route"
+			}, {
+			  fieldName: "Link_climb",
+			  label: "Link to climb site"
+			},
+			]
+          }]
+        }
+	//end of pop up part
+	
+	});
+	
+	map.add(featureLayer8);
+	
+  // Boulder Grade V0
+  var featureLayer7 = new FeatureLayer({
+	url: "https://services1.arcgis.com/qr14biwnHA6Vis6l/arcgis/rest/services/Boulder_Grade_V0/FeatureServer/0?token=dBr_5tH2RYuNdcGYkPPjhVXM5X50bbuksoA6ybU382-erxz_P_sNXFvJ5tgpQq5ztxua5V7AwEId1ZPRsP51vQEGDOWXXuXGZBQ_Os4CjQWoP985CpcAPh4PD360MRVupkeYNGsUIH3svZio2QBtLOZu4fdFD131lEuKf15nenFirp31pxvN52aullun_0EPsjxpEHVGfcmFkFGVFcBHQDTSLIgRhR2g0Nh6i9ePzPoyH-KM0WPHFLAE0QuGf7fm",
+	
+	//start of pop up part
+	  popupTemplate: {
+          title: "{Route_name}",
+          actions: [{
+            id: "find"
+          }],
+          content: [{
+            type: "fields",
+            fieldInfos: [{
+              fieldName: "Route_name",
+			        label: "Route Name"
+            }, {
+              fieldName: "Difficulty",
+              label: "Grade"
+            }, {
+			  fieldName: "Rating"
+			}, {
+			  fieldName: "Type_of_cl",
+			  label: "Type of climbing"
+			}, {
+			  fieldName: "Type"
+			}, {
+			  fieldName: "Link_to_ro",
+			  label: "Link to route"
+			}, {
+			  fieldName: "Link_climb",
+			  label: "Link to climb site"
+			},
+			]
+          }]
+        }
+	//end of pop up part
+	
+	});
+	
+	map.add(featureLayer7);
+	
+  // Rock Grade 5.8
+  var featureLayer6 = new FeatureLayer({
+	url: "https://services1.arcgis.com/qr14biwnHA6Vis6l/arcgis/rest/services/Rock_Grade_58/FeatureServer/0?token=mOJHpB-VfWjC2FSQlwq66C2sAAZBzhSOunC8F7rIgxBC-DBF8grw6zum2LIPaQFR3QqVMG6drFTR_qM7p8_qDjP3ZA8PvapFgspDyKvJfFPu0F-5lJ0wB44Y3RZWHaeaCNG-hArazJDDqg3GxyvryHQgONyo1gaIBlY5oW939EYGtzq3i8zt2YHKfIBeLPow2NvVyZ3xvVRffptGPgZ-srgS7l_slTcZXWz7WFVFqhOnDoMAKYAz_mDsrV2MxHgN",
+	
+	//start of pop up part
+	  popupTemplate: {
+          title: "{Route_name}",
+          actions: [{
+            id: "find"
+          }],
+          content: [{
+            type: "fields",
+            fieldInfos: [{
+              fieldName: "Route_name",
+			        label: "Route Name"
+            }, {
+              fieldName: "Difficulty",
+              label: "Grade"
+            }, {
+			  fieldName: "Rating"
+			}, {
+			  fieldName: "Type_of_cl",
+			  label: "Type of climbing"
+			}, {
+			  fieldName: "Type"
+			}, {
+			  fieldName: "Link_to_ro",
+			  label: "Link to route"
+			}, {
+			  fieldName: "Link_climb",
+			  label: "Link to climb site"
+			},
+			]
+          }]
+        }
+	//end of pop up part
+	
+	});
+	
+	map.add(featureLayer6);
+	
+  // Rock Grade 5.7
+  var featureLayer5 = new FeatureLayer({
+	url: "https://services1.arcgis.com/qr14biwnHA6Vis6l/arcgis/rest/services/Rock_Grade_57/FeatureServer/0?token=ieeMlmRMbgrNPNyIVowpQdxK9FuCxpy2ulSmcwKTAK0jGM4GXAeqHryjMj-BYRv4Yxu_QYI8UD3-8hflt58PP1nDWEs8zzn-Q6rzR4ld5qOqJo8mUodE4VpFnXnF-gDYDLZl4TrwHe75L2dRgfiEdbOPVYFHDs7Y8Y6bqXg-ao6HC1-Dk6g5O6_uMwHTFRAZiNpc7lKtHkfR9CuaWxvF5EPkz8OfPyoE7Js-7DuOquLFmXGk3MtsoPoe1aL8m9N8",
+	
+	//start of pop up part
+	  popupTemplate: {
+          title: "{Route_name}",
+          actions: [{
+            id: "find"
+          }],
+          content: [{
+            type: "fields",
+            fieldInfos: [{
+              fieldName: "Route_name",
+			        label: "Route Name"
+            }, {
+              fieldName: "Difficulty",
+              label: "Grade"
+            }, {
+			  fieldName: "Rating"
+			}, {
+			  fieldName: "Type_of_cl",
+			  label: "Type of climbing"
+			}, {
+			  fieldName: "Type"
+			}, {
+			  fieldName: "Link_to_ro",
+			  label: "Link to route"
+			}, {
+			  fieldName: "Link_climb",
+			  label: "Link to climb site"
+			},
+			]
+          }]
+        }
+	//end of pop up part
+	
+	});
+	
+	map.add(featureLayer5);
+	
+  // Rock Grade 5.6
+  var featureLayer4 = new FeatureLayer({
+	url: "https://services1.arcgis.com/qr14biwnHA6Vis6l/arcgis/rest/services/Rock_Grade_56/FeatureServer/0?token=tuLr6ClU-rub1jZSxm54uh9q9t2TNZgIAJWUDscizSYsetmZTA0rggDgKbB9y-YCRyAmf284putJuR_h2ds5-kd4TGfexcSjrfSCMZZ6RkZVJANWEZkVj2TRAJrRJEFaUTg8Yq_4g5wYmA4bwAbP9DQ5pBY6QmaZIiME6ZLOOU_bi2aOiKogEqQtRfu53EqPGF0NzEpLi6HUro8DGrjCcMjeVIcgRKqQFvfT6JE66KJ7QV_F3deE4HstG95o_Gfk",
+	
+	//start of pop up part
+	  popupTemplate: {
+          title: "{Route_name}",
+          actions: [{
+            id: "find"
+          }],
+          content: [{
+            type: "fields",
+            fieldInfos: [{
+              fieldName: "Route_name",
+			        label: "Route Name"
+            }, {
+              fieldName: "Difficulty",
+              label: "Grade"
+            }, {
+			  fieldName: "Rating"
+			}, {
+			  fieldName: "Type_of_cl",
+			  label: "Type of climbing"
+			}, {
+			  fieldName: "Type"
+			}, {
+			  fieldName: "Link_to_ro",
+			  label: "Link to route"
+			}, {
+			  fieldName: "Link_climb",
+			  label: "Link to climb site"
+			},
+			]
+          }]
+        }
+	//end of pop up part
+	
+	});
+	
+	map.add(featureLayer4);
+	
+  // Rock Grade 5.5
+  var featureLayer3 = new FeatureLayer({
+	url: "https://services1.arcgis.com/qr14biwnHA6Vis6l/arcgis/rest/services/Rock_Grade_55/FeatureServer/0?token=Sehj3OfH5Wf5fFRPYUHDtLrNRBfZbTsuykEgMdZloywNW7n8FOhQ0fJ8EsYvsQbYYBA8XolaCGRyT6RRXawigKua7l0RYpKnO3Dml4i0JR9kLyFsODF7o_9FZ5mTCayefTkxuYGVC30IIC_FecrrBfjBSKxyduk4ZHKeIKkwbTA9-ZgVVeOUH_aEjvpenohy9GE4xtOAqYcEuQxud47b7jxrZaTXbro8r2ifFMcNWEL1SBA7cH7Yv3GtlXeJqb1p",
+	
+	//start of pop up part
+	  popupTemplate: {
+          title: "{Route_name}",
+          actions: [{
+            id: "find"
+          }],
+          content: [{
+            type: "fields",
+            fieldInfos: [{
+              fieldName: "Route_name",
+			        label: "Route Name"
+            }, {
+              fieldName: "Difficulty",
+              label: "Grade"
+            }, {
+			  fieldName: "Rating"
+			}, {
+			  fieldName: "Type_of_cl",
+			  label: "Type of climbing"
+			}, {
+			  fieldName: "Type"
+			}, {
+			  fieldName: "Link_to_ro",
+			  label: "Link to route"
+			}, {
+			  fieldName: "Link_climb",
+			  label: "Link to climb site"
+			},
+			]
+          }]
+        }
+	//end of pop up part
+	
+	});
+	
+	map.add(featureLayer3);
+	
+  // Rock Grade 5.4
+  var featureLayer2 = new FeatureLayer({
+	url: "https://services1.arcgis.com/qr14biwnHA6Vis6l/arcgis/rest/services/Rock_Grade_54/FeatureServer/0?token=h5RP7GkwjxdsfOfa_wnmyXsMbETEDyjjemvEdp6uL0kbJoh-blkViDHeB3Ldc-IDAcGl5ow1oSx-33g-nbRjbELbQcseXhO8-IFmQ6q-C_60zRo9TUXfkoXXJL9wWdkiaONJhzUdzKPNjYRGl7LJbDaNuuU39rZ6oNIvfhzIxcZvJPjwMxPXdt5kJeEfXyNOo6yNiAJ3sZtzshYv8jKbf52PR6UDVzSuhmjgxOx83i7VxEgpnIK3IWQ80slgC3tW",
+	
+	//start of pop up part
+	  popupTemplate: {
+          title: "{Route_name}",
+          actions: [{
+            id: "find"
+          }],
+          content: [{
+            type: "fields",
+            fieldInfos: [{
+              fieldName: "Route_name",
+			        label: "Route Name"
+            }, {
+              fieldName: "Difficulty",
+              label: "Grade"
+            }, {
+			  fieldName: "Rating"
+			}, {
+			  fieldName: "Type_of_cl",
+			  label: "Type of climbing"
+			}, {
+			  fieldName: "Type"
+			}, {
+			  fieldName: "Link_to_ro",
+			  label: "Link to route"
+			}, {
+			  fieldName: "Link_climb",
+			  label: "Link to climb site"
+			},
+			]
+          }]
+        }
+	//end of pop up part
+	
+	});
+	
+	map.add(featureLayer2);
+	
+  // Rock Grade 5.3
+  var featureLayer1 = new FeatureLayer({
+	url: "https://services1.arcgis.com/qr14biwnHA6Vis6l/arcgis/rest/services/Rock_Grade_53/FeatureServer/0?token=v0TqsnWFkoDwBR7rIkfIW8gUDZSOoNHDkyCML6uEcxzn58rjiLZY-cZLSfqoCA6g7ZfKD9DVz5xtZt6WsOO0rrS2DMdrjmzka-0q1ZpHvaY2NBjE6iBGByV5Yrc_sB4DqNE8RTpffrX9pGwAN5Fu7puiB0ENdAbV7_rHEgWdWnCpCYp-UmwwDSw81N9dESlXKNxr0K-qhA3LoVY9ybQb24WiIVyk8Qhc1kwjcvdGG-mkBAYz0q3ROe8D6JW1ZXvR",
+	
+	//start of pop up part
+	  popupTemplate: {
+          title: "{Route_name}",
+          actions: [{
+            id: "find"
+          }],
+          content: [{
+            type: "fields",
+            fieldInfos: [{
+              fieldName: "Route_name",
+			        label: "Route Name"
+            }, {
+              fieldName: "Difficulty",
+              label: "Grade"
+            }, {
+			  fieldName: "Rating"
+			}, {
+			  fieldName: "Type_of_cl",
+			  label: "Type of climbing"
+			}, {
+			  fieldName: "Type"
+			}, {
+			  fieldName: "Link_to_ro",
+			  label: "Link to route"
+			}, {
+			  fieldName: "Link_climb",
+			  label: "Link to climb site"
+			},
+			]
+          }]
+        }
+	//end of pop up part
+	
+	});
+	
+	map.add(featureLayer1);
+	
+	
+	
+  var layerList = new LayerList({view: view});
+  // Adds widget below other elements in the top left corner of the view
+  view.ui.add(layerList, {position: "top-right"});
+	
+	
+	
+});
+</script>
+</head>
+<body>
+  <div id="viewDiv"></div>
+</body>
+</html>
