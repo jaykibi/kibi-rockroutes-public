@@ -5,9 +5,9 @@
 
 **<a href="https://youtu.be/6yAllPr3bQk">Click here for Rock Route's Presentation VIDEO</a>**
 
-**<a href="https://github.tamu.edu/GEOG478Project/RockRoutesCO/blob/master/REPORT/Rock%20Routes%20Slides.pdf">Click here for Rock Route's Presentation SLIDESHOW</a>**
+**<a href="https://github.com/jaykibi/kibi-rockroutes-public/blob/master/RockRoutesCO-master/REPORT/Rock%20Routes%20Slides.pdf">Click here for Rock Route's Presentation SLIDESHOW</a>**
 
-![alt text](https://github.tamu.edu/GEOG478Project/RockRoutesCO/blob/master/REPORT/pictures/1.JPG)
+![alt text](https://github.com/jaykibi/kibi-rockroutes-public/blob/master/RockRoutesCO-master/REPORT/pictures/1.JPG)
 
 
 ## Created by: Adilah Amalia, Liliana Coronado, Martin Portillo, Raquibbi Samaun
@@ -50,23 +50,23 @@ We used various technologies to include: Google Sites, ArcGIS online, ArcMap, an
 
 Map: 
 
-![alt text](https://github.tamu.edu/GEOG478Project/RockRoutesCO/blob/master/REPORT/pictures/2.JPG)
+![alt text](https://github.com/jaykibi/kibi-rockroutes-public/blob/master/RockRoutesCO-master/REPORT/pictures/2.JPG)
 
 MapView: 
 
-![alt text](https://github.tamu.edu/GEOG478Project/RockRoutesCO/blob/master/REPORT/pictures/3.JPG)
+![alt text](https://github.com/jaykibi/kibi-rockroutes-public/blob/master/RockRoutesCO-master/REPORT/pictures/3.JPG)
 
 FeatureLayer:
 
-![alt text](https://github.tamu.edu/GEOG478Project/RockRoutesCO/blob/master/REPORT/pictures/4.JPG)
+![alt text](https://github.com/jaykibi/kibi-rockroutes-public/blob/master/RockRoutesCO-master/REPORT/pictures/4.JPG)
 
 LayerList:
 
-![alt text](https://github.tamu.edu/GEOG478Project/RockRoutesCO/blob/master/REPORT/pictures/5.JPG)
+![alt text](https://github.com/jaykibi/kibi-rockroutes-public/blob/master/RockRoutesCO-master/REPORT/pictures/5.JPG)
 
 PopupTemplate:
 
-![alt text](https://github.tamu.edu/GEOG478Project/RockRoutesCO/blob/master/REPORT/pictures/6.JPG)
+![alt text](https://github.com/jaykibi/kibi-rockroutes-public/blob/master/RockRoutesCO-master/REPORT/pictures/6.JPG)
 
 **Participation within the project:**
 
